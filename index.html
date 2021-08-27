@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="image/t-logo.png" />
     <link rel="apple-touch-icon" href="image/t-logo.ico"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 </head>
 <body>
 <div id="wrapper">
@@ -46,7 +48,21 @@
     <div class="clearfix"></div>
 
     <section class="banner">
-        <div class="banner-content"></div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                    <div class="slide-img-1"></div>
+              </div>
+              <div class="swiper-slide">
+                    <div class="slide-img-2"></div>
+              </div>
+              <div class="swiper-slide">
+                    <div class="slide-img-3"></div>
+              </div>
+            </div>
+            <div class="xi-angle-left p-a color-wight top-50"></div>
+            <div class="xi-angle-right p-a color-wight top-50"></div>
+          </div>
     </section>
 
     <section class="notice-wrap">
@@ -151,6 +167,15 @@
     </footer>
 </div>
 <!-- wrapper 끝 -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".xi-angle-right",
+        prevEl: ".xi-angle-left",
+      },
+    });
+  </script>
 
 </body>
 </html>
